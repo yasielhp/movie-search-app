@@ -9,8 +9,9 @@ function App() {
 
 	const searchMovie = async e => {
 		e.preventDefault()
-		const API_KEY = '4d02c815'
-		const API_URL = `http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${query}`
+		const API_URL = `http://www.omdbapi.com/?i=tt3896198&apikey=${
+			import.meta.env.VITE_API_KEY
+		}&s=${query}`
 
 		try {
 			if (query === '') {
